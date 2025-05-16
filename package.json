@@ -3,14 +3,15 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start --dev-client --reset-cache --port 8090",
-    "tunnel": "expo start --dev-client --tunnel",
+    "start": "expo start --dev-client --reset-cache --host lan",
+    "tunnel": "expo start --dev-client --host tunnel",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android --reset-cache",
     "ios": "expo start --ios --reset-cache",
     "web": "expo start --web --reset-cache",
     "lint": "expo lint",
     "format": "prettier --write .",
+    "postbuild": "mkdir -p dist && mv *.ipa *.apk dist/ || true",
     "eas-build-pre-install": "corepack enable && corepack prepare yarn@4.9.1 --activate"
   },
   "dependencies": {
