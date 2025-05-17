@@ -9,11 +9,18 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "jsEngine": "hermes",
+    "devClient": {
+      "silentLaunch": false
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.nonarnee.grow",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocalNetworkUsageDescription": "Needed for Expo Dev Client.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
       }
     },
     "android": {
@@ -22,7 +29,8 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.nonarnee.grow"
+      "package": "com.nonarnee.grow",
+      "usesCleartextTraffic": true
     },
     "web": {
       "bundler": "metro",

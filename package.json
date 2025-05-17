@@ -7,8 +7,8 @@
     "tunnel": "expo start --dev-client --host tunnel",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android --reset-cache",
-    "ios": "expo start --ios --reset-cache",
-    "web": "expo start --web --reset-cache",
+    "ios": "expo start --ios --dev-client --reset-cache",
+    "web": "expo start --web --dev-client --reset-cache",
     "lint": "expo lint",
     "format": "prettier --write .",
     "postbuild": "mkdir -p dist && mv *.ipa *.apk dist/ || true",
@@ -42,6 +42,9 @@
     "react-native-screens": "~4.10.0",
     "react-native-web": "~0.20.0",
     "react-native-webview": "13.13.5"
+  },
+  "overrides": {
+    "react": "19.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
