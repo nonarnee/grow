@@ -10,9 +10,6 @@
       "node": "22.15.1",
       "ios": {
         "simulator": true
-      },
-      "android": {
-        "simulator": true
       }
     },
     "preview": {
