@@ -13,7 +13,7 @@ export default function LoginScreen() {
     console.log('로그인 시도:', email, password);
 
     // 로그인 성공 시 탭 화면으로 이동
-    router.replace('/(tabs)');
+    router.replace('/(tabs)/home');
   };
 
   return (

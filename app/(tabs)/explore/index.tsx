@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Tab() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>프로필</Text>
+      <Text style={styles.text}>탐험</Text>
     </View>
   );
 }
@@ -12,7 +12,6 @@ export default function Tab() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
   },

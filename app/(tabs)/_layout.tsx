@@ -7,15 +7,19 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: 'rgb(46 16 101 / 0.4)',
-        tabBarStyle: { backgroundColor: 'rgb(46 16 101 / 0.8)' },
+        tabBarStyle: {
+          backgroundColor: 'rgba(46 16 101 / 1)',
+          borderColor: 'rgba(46 16 101 / 1)',
+          paddingTop: 10,
+        },
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: '홈',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="home" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="home-outline" color={color} />,
+          tabBarLabelStyle: { marginTop: 3, fontSize: 12 },
           headerShown: false,
         }}
       />
@@ -23,7 +27,8 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: '탐험',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="planet" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="planet-outline" color={color} />,
+          tabBarLabelStyle: { marginTop: 3, fontSize: 12 },
           headerShown: false,
         }}
       />
@@ -31,7 +36,8 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: '프로필',
-          tabBarIcon: ({ color }) => <Ionicons size={28} name="person" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="person-outline" color={color} />,
+          tabBarLabelStyle: { marginTop: 3, fontSize: 12 },
           headerShown: false,
         }}
       />
